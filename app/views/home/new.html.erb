@@ -1,0 +1,33 @@
+<main>
+<div class="asdasdasd">
+    <br>
+    <form action='/home/create/<%= @contest.id %>' method='post'>
+
+            <b>공모전 이름: <%= @contest.name %></b><br><br>
+
+
+
+
+                제목 <input type="text" name="input_title" ><br>
+
+
+                팀원수 <input type="number" name="quantity" min="1" max="10" value="1"><br>
+
+
+                연락처 <input type="text" name="contact" width='1'><br>
+
+
+        카카오 아이디<br>
+        <input type="text" name="kakao" ><br>
+
+        내용:<br>
+        <textarea rows="4" cols="50" type="text" name="input_content">
+        </textarea>
+        <button class="btn btn-default btn-submit" type="submit" >만들기</button>
+        
+</div>
+
+
+
+</form>
+</main>

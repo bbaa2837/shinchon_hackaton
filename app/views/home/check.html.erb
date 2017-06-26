@@ -1,0 +1,15 @@
+<div class="text-center">
+    <br>
+    <% if @post.current_num==@post.group_num %>
+        <h2>정원이 초과되었습니다</h2>
+    <% else %>
+        <h2>참여되었습니다!</h2>
+        <% unless @post.kakao.nil? %>
+            <h2>작성자의 카카오아이디는 "<%= @post.kakao %>" 입니다</h2>
+            <h2>연락해보세요!</h2>
+        <% end %>
+    <% end %>
+    
+    <h3><a href="/home/list/<%=@post.contest_id %>">목록으로</a></h3>
+    
+</div>

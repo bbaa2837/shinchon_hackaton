@@ -1,0 +1,23 @@
+<div style = "background-color: #ffffff" class='text-center'>
+    <h3 style = "color : black"><%= @contest.name %></h3>
+    <div class ="text-center">
+    <img src="<%=@contest.imgurl%>"</a><br><br>
+    </div>
+    <h3><%=@contest.infod %></h3>
+    <h3><%=@contest.infom %></h3>
+    <% if user_signed_in? %>
+    <form action="/home/list/<%= @contest.id %>" method="get">
+        <button class="btn btn-default btn-submit" type="submit">팀원 구하러 고고씽</button>
+    </form>
+<% else %>
+    <form action="/users/sign_in" method="get">
+        <button class="btn btn-default btn-submit" type="submit">팀원 구하러 고고씽</button>
+    </form>
+<% end %>
+</div>
+
+
+                          
+
+    
+    

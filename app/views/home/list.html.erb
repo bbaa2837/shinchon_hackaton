@@ -1,0 +1,34 @@
+
+<div style = "background-color : #ffffff" class='text-center'>
+  <h1 class = "text-center" style = "color : black"><%= @contest.name %></h1>
+<div class="container">
+<h2 style="text-align:left">내가 만들 팀</h2>  
+
+  <div class="jumbotron" style = "background-color : #FFBCB9">
+  <a href="/home/new/<%= @contest.id%>" method="get">
+      <h2>Make Team</h2>
+  </a>
+</div>
+  </div>
+</div>
+
+<div style ="background-color : #ffffff" class = "text-center">
+  <div class="container">
+  <h2 style="text-align:left">이미 있는 팀</h2>
+  </div>
+  <% @contest.posts.all.each do |post| %>
+  <div class="container">
+  <div class="jumbotron">
+    <div class='row'>
+      <div class='col-sm-4'></div>
+      <div class='col-sm-4'>
+  <a href="/home/info_t/<%= post.id%>" method="get">
+    <%= post.title %><br> 현재인원(<%=post.current_num %>/<%=post.group_num %>)
+  </a>
+      </div>
+    </div>
+  </div>
+  </div>
+
+  <% end %>
+</div>

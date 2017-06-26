@@ -1,0 +1,13 @@
+<div class = "text-center" style = "background-color: #ffffff">
+    <h1 style ="color : black"><%= @post.title %></h1>
+    <h3 style = "color : black">작성자: <%=@post.writer%></h3>
+    <h3 style = "color : black">연락처: <%= @post.contact%></h3>
+    <h3 style = "color : black">인원: <%= @post.current_num%> / <%=@post.group_num%></h3>
+    <br>
+    <h4><%= @post.content %></h4>
+    <h4><a href="/home/list/<%=@post.contest_id %>">목록으로</a></h4>
+    
+    <form action="/home/check/<%= @post.id %>" method="post">
+        <input class="btn btn-default btn-submit" type="submit" value="참여하기" style="width:15%">
+    </form>
+</div>
